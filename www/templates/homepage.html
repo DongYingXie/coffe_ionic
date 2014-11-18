@@ -1,0 +1,46 @@
+<ion-view>
+<ion-header-bar align-title="left" class="bar-css">
+  <div class="buttons">
+    <button class="button button-clear ion-coffee" ng-click="doSomething()"></button>
+  </div>
+  <h1 class="title"><input class="bar-input" placeholder=" 查找感兴趣的商品"/></h1>
+  <div class="buttons">
+    <button class="button button-clear ion-ios7-search"></button>
+  </div>
+</ion-header-bar>
+  <ion-content >
+  <!-- 滑动图片 -->
+	 <ion-slide-box on-slide-changed="slideHasChanged($index)">
+			  <ion-slide>
+			    <div class="box blue"><img src = 'lib/img/home.png' /></div>
+			  </ion-slide>
+			  <ion-slide>
+			    <div class="box yellow"><img src = 'lib/img/home.png' /></div>
+			  </ion-slide>
+			  <ion-slide>
+			    <div class="box pink"><img src = 'lib/img/home.png' /></div>
+			  </ion-slide>
+	</ion-slide-box>
+	<!-- 滑动图片 end -->
+	 <!-- 选择部分 -->
+	 <div class="flex-equal ">
+		  <li class=""><a href="" class=""><img src="lib/img/order.png" ><p>我的订单</p></a></li>        
+		  <li class=""><a href=""><img src="lib/img/product.png"><p>所有商品</p></a></li>        
+		  <li class=""><a href=""><img src="lib/img/coffecult.png"><p>咖啡文化</p></a></li>        
+		  <li class=""><a href=""><img src="lib/img/kefu.png"><p>咨询客服</p></a></li>        
+
+	 </div>
+  <!-- 精品推荐  部分-->
+		    <div class="jingpininfo">
+		    	<a href="" class="" > 精品推荐<span></span></a>
+		    </div>
+			<div class="row jinpinshow ">
+				<div class="col-50 col-borderR"><a href=""><img src="lib/img/jinpin.png"><span>迷你胶囊咖啡机 ICUP 8899 红色</span></a></div>	
+				<div class="col-50 col-borderR"><a href=""><img src="lib/img/jinpin.png"><span>迷你胶囊咖啡机 ICUP 8899 红色</span></a></div>	
+			</div>	
+			<div class="row jinpinshow">
+				<div class="col-50 col-borderR"><a href=""><img src="lib/img/jinpin.png"><span>迷你胶囊咖啡机 ICUP 8899 红色</span></a></div>	
+				<div class="col-50 col-borderR"><a href=""><img src="lib/img/jinpin.png"><span>迷你胶囊咖啡机 ICUP 8899 红色</span></a></div>	
+			</div>
+  </ion-content>
+</ion-view>
