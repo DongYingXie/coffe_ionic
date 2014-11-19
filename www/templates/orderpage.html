@@ -1,11 +1,17 @@
 <ion-view title="Dashboard">
 <ion-header-bar align-title="center" class="bar-css">
   <div class="buttons">
-    <button class="button button-clear ion-ios7-arrow-back" ng-click="doSomething()"></button>
+    <a class="button button-clear ion-ios7-arrow-back" ng-href="#/tab/person"></a>
   </div>
   <h1 class="title">我的订单</h1>
 </ion-header-bar>
-  <ion-content class="padding">
+<div class="bar bar-subheader">
+    <ul class="subnav">
+            <li class="activeli"><a >最新订单</a></li>
+            <li><a >过往订单</a></li>
+    </ul>
+</div>
+  <ion-content class="padding has-subheader">
     <div class="ordercontents">
                  	<ul >
                  		<li class="new-oreder-li">

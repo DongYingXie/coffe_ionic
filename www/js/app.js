@@ -93,6 +93,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+    // 我的购物车页面
+    .state('mycart',{
+      url:'/mycart',
+      templateUrl:'templates/mycartpage.html'
+    })
+    // 修改我的购物车页面
+    .state('mycartchange',{
+      url:'/mycartchange',
+      templateUrl:'templates/mycartchange.html'
+    })
     //个人中心页面
     .state('tab.person', {
       abstract: true,
