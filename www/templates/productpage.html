@@ -1,0 +1,48 @@
+<ion-view >
+<ion-header-bar align-title="center" class="bar-css">
+  <div class="buttons">
+    <a class="button button-clear ion-ios7-arrow-back" href="#/tab/sortdetail"></a>
+  </div>
+  <h1 class="title">产品详细</h1>
+</ion-header-bar>
+
+ <!--  -->
+<ion-content >
+  <!-- 滑动图片 -->
+	 <ion-slide-box on-slide-changed="slideHasChanged($index)">
+			  <ion-slide>
+			    <div class="box blue"><img src = 'lib/img/detailPro.png' /></div>
+			  </ion-slide>
+			  <ion-slide>
+			    <div class="box yellow"><img src = 'lib/img/detailPro.png' /></div>
+			  </ion-slide>
+			  <ion-slide>
+			    <div class="box pink"><img src = 'lib/img/detailPro.png' /></div>
+			  </ion-slide>
+	</ion-slide-box>
+	<!-- 滑动图片 end -->
+					<!-- 商品信息 部分 -->
+					<div class="ProDetail">
+					<ul >
+						 <li>
+						  <span class="blackcolors">迷你胶囊咖啡机 ICUP 8899 红色 多余的标题文字</span>
+		            	  <span class="graycolor">ICUP 8889  &nbsp; &nbsp; &nbsp;<span class="bluecolor">组合</span></span>
+		            	 <span><span class="redcolor fontsize">￥ 2888.0</span> &nbsp; &nbsp; &nbsp; <span class="graycolor textoverline">￥ 2888.0</span></span>
+						 </li>
+						 <li class='expanded' ng-click='showHide("Pro_info")'>商品介绍</li>
+                         <p id="Pro_info" ng-show="showflage&&(elem=='Pro_info')" >fsgtsrtdsrgdfgdf</p>
+						 <li class='expanded' ng-click='showHide("Pro_parame");'>规格参数 </li>
+                         <p id="Pro_parame" ng-show="showflage&&(elem=='Pro_parame')">fsgtsrtdsrgdfgdf</p>
+						 <li class='expanded' onclick='showHide("Pro_send");'>包装配送说明 </li>	
+                         <p id="Pro_send" ng-show="showflage&&(elem=='Pro_send')">fsgtsrtdsrgdfgdf</p>
+					</ul>
+					
+					</div>
+</ion-content>
+<ion-footer-bar>
+         <div class="Ccartfootclass">
+           <button class="footerBtu yelloBGcolor">加入购物车</button>   
+           <button class="footerBtu ziBGcolor">立即购买</button> 
+           <button class="footerBtuSmall"></button>
+        </div> </ion-footer-bar>
+</ion-view>

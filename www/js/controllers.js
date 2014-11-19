@@ -14,3 +14,11 @@ angular.module('starter.controllers', [])
 })
 .controller('personCtrl', function($scope) {
 })
+.controller('productpageCtrl',function($scope){
+	$scope.showflage=false;
+	$scope.elem='';
+	$scope.showHide=function(_e){
+    $scope.showflage=!$scope.showflage;
+    $scope.elem=_e;
+	}
+})

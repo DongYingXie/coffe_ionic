@@ -37,6 +37,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
   // Each tab has its own nav history stack:
+  // 主页页面
   .state('tab.home', {
       url: '/home',
       views: {
@@ -46,6 +47,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+    // 分类页面
     .state('tab.sort', {
       url: '/sort',
       views: {
@@ -55,6 +57,23 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+    //分类详细页面
+    .state('tab.sortdetail', {
+      url: '/sortdetail',
+      views: {
+        'sortpage': {
+          templateUrl: 'templates/sortdetail.html'
+        }
+      }
+
+    })
+    // 产品细节页面
+    .state('production',{
+      url:'/production',
+      templateUrl:'templates/productpage.html',
+      controller:'productpageCtrl'
+    })
+    // 咨询页面
     .state('tab.ask', {
       url: '/ask',
       views: {
@@ -64,6 +83,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+    //购物车页面
     .state('tab.cart', {
       url: '/cart',
       views: {
@@ -73,6 +93,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+    //个人中心页面
     .state('tab.person', {
       abstract: true,
       url: '/person',
@@ -82,36 +103,39 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
-    .state('tab.person.my', {
+
+  .state('tab.person.my', {
       url: '',
       templateUrl: 'templates/personpage.html',
       controller: 'personCtrl'
     })
-    .state('tab.person.order', {
+    //我的订单页面
+    .state('order', {
       url: '/order',
       templateUrl: 'templates/orderpage.html',
     })
+    //登录页面
     .state('tab.person.login', {
       url: '/login',
       templateUrl: 'templates/loginpage.html'
     })
+    //注册页面
     .state('tab.person.register', {
       url: '/register',
       templateUrl: 'templates/registerpage.html'
     })
+    //忘记密码页面
     .state('tab.person.forgetpsw', {
       url: '/forgetpsw',
       templateUrl: 'templates/forgetpswpage.html'
     })
+    //绑定商店页面
     .state('tab.person.bindstore', {
       url: '/bindstore',
       templateUrl: 'templates/bindstorepage.html'
     })
-    .state('tab.sortdetail',{
-      url:'/sortdetail',
-      templateUrl:'templates/tab-friends.html'
-    })
-    // if none of the above states are matched, use this as the fallback
+
+  // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/home');
 
 });

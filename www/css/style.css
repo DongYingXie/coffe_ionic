@@ -1,4 +1,7 @@
 /* Empty. Add your own CSS if you like */
+.subheader-nav{height:100%;width: 100%;}
+.subheader-nav li{display: inline-block;width: 24%;height:100%;-webkit-box-sizing:border-box;box-sizing:border-box;}
+.bar-footer{height:70px;}
 .tabs{background-color: rgb(102,102,102);}
 .tab-item{ color:#fff;}
 .tab-item.tab-item-active, .tab-item.active, .tab-item.activated { background-color: rgb(177,32,123);}
@@ -473,8 +476,8 @@ text-decoration:line-through;
 .ProDetail ul li:first-child{
 	background: none;
 	height: 90px;
-	line-height: 80px;
-
+	/*line-height: 90px;*/
+    
 }
 .showhidePRO{
 	padding-left: 10px;
