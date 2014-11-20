@@ -101,12 +101,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     // 我的购物车页面
     .state('mycart',{
       url:'/mycart',
-      templateUrl:'templates/mycartpage.html'
+      templateUrl:'templates/mycartpage.html',
+      controller:'mycartCtrl'
     })
     // 修改我的购物车页面
     .state('mycartchange',{
       url:'/mycartchange',
-      templateUrl:'templates/mycartchange.html'
+      templateUrl:'templates/mycartchange.html',
+      controller:'cartchangeCtrl'
     })
     //个人中心页面
     .state('tab.person', {
@@ -128,11 +130,13 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     .state('order', {
       url: '/order',
       templateUrl: 'templates/orderpage.html',
+
     })
     //登录页面
     .state('tab.person.login', {
       url: '/login',
-      templateUrl: 'templates/loginpage.html'
+      templateUrl: 'templates/loginpage.html',
+      controller:'loginCtrl'
     })
     //注册页面
     .state('tab.person.register', {

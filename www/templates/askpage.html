@@ -1,5 +1,21 @@
 <ion-view title="Dashboard">
   <ion-content class="padding">
-    <h1>Dash</h1>
+  <div>
+  <button ng-click="updataCard()">更新id为3的银行卡</button>
+  <br/>
+  <button ng-click="addCard()">添加一张新的银行卡</button>
+  <br/>
+  <button ng-click="delCard()">删除id为3的银行卡</button>
+  <br/>
+  <span>{{card_1.name}}</span>
+  <br/>
+  <span>{{card_2.name}}</span>
+  <br/>
+  <span>{{card_3.name}}</span>
+  <br/>
+  <span>{{card_4.name}}</span>
+  <br/>
+  <span>{{cards}}</span>
+</div>
   </ion-content>
 </ion-view>

@@ -307,7 +307,7 @@ color:rgb(196,39,136);
 	width: 35px;
 	position: relative;
 display: inline-block;
-	background: url(../img/reduceBtu.png);
+	background: url(../lib/img/reduceBtu.png);
 	background-size: 100% 100%;
 }
 .midBtu{
@@ -334,7 +334,7 @@ display: inline-block;
  border: 1px solid #e8e8e8;
 	height: 20px;
 	width: 35px;
-	background: url(../img/addBtu.png);
+	background: url(../lib/img/addBtu.png);
 	background-size: 100% 100%;
 }
 .cartpagetatal{
@@ -569,7 +569,7 @@ line-height: 40px;
 .checkboxfoot{
 	width: 35px;
 	height: 40px;
-	background-image: url(../img/checkbox.png);
+	background-image: url(../lib/img/checkbox.png);
 	background-size: 100% 100%;
     float: left;
     display: block;

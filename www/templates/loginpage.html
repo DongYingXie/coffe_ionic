@@ -6,18 +6,24 @@
 <h1 class="title">登录</h1>
 </ion-header-bar>
   <ion-content class="padding">
-                		<div class="registerpage">
+                <div class="registerpage">
             			<ul>
             				<div class="registerTitle">
             					<p>登录</p>
             				</div>
-            				<li><input type="text" placeholder="用户名/邮箱"></li>
-            				<li><input type="text" placeholder="密码"></li>
+                    <form name="loginform">
+            				<li><input type="email" placeholder=" 用户名/邮箱" ng-model="login.name" name="loginname" required></li>
+            				<li><input type="text" placeholder=" 密码" ng-model="login.password" ng-maxlength="6" ng-minlength="1" name="loginpsw" required></li>
             			</ul>
-            			<button>登录</button>
+            			<button ng-click="loginBtnPre(loginform.$dirty,loginform.loginname.$valid,loginform.loginpsw.$valid)">登录</button>
+                  </form>
             			<div class="registerInfo">
             				<a>忘记密码了？</a>
             			</div>
             		</div>
+                <!-- 可以通过下面的方法来验证表单是否正确 -->
+<!--                 <p> your form is change===={{loginform.$dirty}}</p>
+                <p> your name is ok===={{loginform.loginname.$valid}}</p>
+                <p> your password is ok===={{loginform.loginpsw.$valid}}</p> -->
   </ion-content>
 </ion-view>
