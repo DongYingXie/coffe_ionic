@@ -235,11 +235,16 @@ color:rgb(196,39,136);
 .leftcheckbox{
 	width: 30px;
 	height: 30px;
-	background-image: url(../lib/img/checkbox.png);
 	background-size: 100% 100%;
 	position: absolute;
 	top:40px;
 	left: 10px;	
+}
+.truecheckbox{
+		background-image: url(../lib/img/checkbox.png);
+}
+.falsecheckbox{
+		background-image: url(../lib/img/addBtu.png);
 }
 .pricecolor{
 	color:rgb(254,0,0);
@@ -721,3 +726,35 @@ line-height: 40px;
 
 /*iPad:*/
 @media screen and (device-aspect-ratio: 3/4) {}
+
+input[type="checkbox"] {
+    opacity:0;
+    height: 16px;
+    width: 17px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+input[type="checkbox"] + label{
+    background-image: url(../lib/img/falsecheckbox.png);
+    height: 30px;
+    width: 30px;
+    	background-size: 100% 100%;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+input[type="checkbox"]:checked + label{
+    background-image: url(../lib/img/checkbox.png);
+    height: 30px;
+    width: 30px;
+    background-size: 100% 100%;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}

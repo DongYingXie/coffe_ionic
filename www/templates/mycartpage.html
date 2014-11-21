@@ -11,19 +11,19 @@
   <ion-content >
 					<div>
 					<ul>
-						<li class="cartli">
+<!-- 						<li class="cartli">
 							<span class="leftcheckbox"></span>
 							<img src="lib/img/cartprod.png"/>
 							<h2>迷你胶囊咖啡机 ICUP 8899 红色</h2>
 							<p>￥2888.0</p>
 							<p>数量：1<span class="pricecolor">小计：￥2888.0</span></p>
-						</li>
-						<li class="cartli">
+						</li> -->
+						<li class="cartli" ng-repeat="cartdata in cartdatas">
 							<span class="leftcheckbox"></span>
-							<img src="lib/img/cartprod.png"/>
-							<h2>迷你胶囊咖啡机 ICUP 8899 红色</h2>
-							<p>￥2888.0</p>
-							<p>数量：1<span class="pricecolor">小计：￥2888.0</span></p>
+							<img ng-src="{{cartdata.img}}"/>
+							<h2>{{cartdata.detail}}</h2>
+							<p>{{cartdata.price}}</p>
+							<p>数量：{{cartdata.number}}<span class="pricecolor">小计：￥{{cartdata.price}}</span></p>
 						</li>
 					</ul>
 				</div>

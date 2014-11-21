@@ -10,22 +10,26 @@
   <ion-content >
    <div>
 		<ul>
-			<li class="cartli">
+<!-- 			<li class="cartli">
 				<span class="leftcheckbox"></span>
 				<img src="lib/img/cartprod.png"/>
 				<h2>迷你胶囊咖啡机 ICUP 8899 红色</h2>
 				<p class="cartpagetatal">￥2888.0</p>
 				<p class="cartpagetatal">数量   <a class="reduceBtu"> </a><a class="midBtu" ng-bind="">1 </a><a class="addBtn"></a>
 			  </p>	
-			</li>
-			<li class="cartli">
-				<span class="leftcheckbox"></span>
-				<img src="lib/img/cartprod.png"/>
-				<h2>迷你胶囊咖啡机 ICUP 8899 红色</h2>
-				<p class="cartpagetatal">￥2888.0</p>
-				<p class="cartpagetatal">数量   <a class="reduceBtu"> </a><a class="midBtu">1 </a><a class="addBtn"></a></p>
+			</li> -->
+			<li class="cartli" ng-repeat="cartdata in cartdatas">
+		        <span class="leftcheckbox">
+		        	 <input type="checkbox" ng-checked="selectedPermissions.containsObjectWithProperty('id', cartdata.id)" ng-click="toggleSelection(cartdata)" />
+                     <label></label>
+		        </span>
+				<img ng-src="{{cartdata.img}}"/>
+				<h2>{{cartdata.detail}}</h2>
+				<p class="cartpagetatal">￥{{cartdata.price}}</p>
+				<p class="cartpagetatal">数量   <a class="reduceBtu" ng-click="reduceNum($index)"> </a><a class="midBtu">{{cartdata.number}} </a><a class="addBtn" ng-click="addNum($index)"></a></p>
 			</li>
 		</ul>
+	</div>
 	</div>	
 
   </ion-content>
@@ -33,7 +37,7 @@
       <div class="cartfootclass">
         <span class="checkboxfoot"></span>
         <span class="orgincolor">选择了一件商品</span> 
-        <button class="footerBtu orginBGcolor floatright">删除</button>   
+        <button class="footerBtu orginBGcolor floatright" ng-click="deleteCartData()">删除</button>   
     </div>   
   </ion-header-bar>
 </ion-view>
