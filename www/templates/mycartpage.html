@@ -18,8 +18,11 @@
 							<p>￥2888.0</p>
 							<p>数量：1<span class="pricecolor">小计：￥2888.0</span></p>
 						</li> -->
-						<li class="cartli" ng-repeat="cartdata in cartdatas">
-							<span class="leftcheckbox"></span>
+						<li class="cartli" ng-repeat="cartdata in cartdata">
+						<span class="leftcheckbox">
+				        	 <input type="checkbox" ng-checked="selectedP.containsObjectWithProperty('id', cartdata.id)" ng-click="toggleS(cartdata)" />
+			                 <label></label>
+		               </span>
 							<img ng-src="{{cartdata.img}}"/>
 							<h2>{{cartdata.detail}}</h2>
 							<p>{{cartdata.price}}</p>

@@ -9,11 +9,29 @@ angular.module('starter.controllers', [])
 .controller('cartpageCtrl', function($scope) {})
 	// 我的购物车 页面控制器
 	.controller('mycartCtrl', function($scope, getHttp) {
-		$scope.cartdatas = '';
+		$scope.cartdata= [];
+		$scope.selectedP=[];
 		getHttp.get_data(carturl).then(function(_data) {
-			$scope.cartdatas = _data;
+			$scope.cartdata = _data;
 		});
-
+    	// 处理当选择checkbox时，插入selectPermissions 数组中
+		// 当点击checkbox 时 检查selectPermissions 数组是否已经存在了该 id
+		// 如果存在 返回-1 ；转换checkbox 的状态 即把该ID 删除id
+		// 否则 插入selectPermissions 数组
+		    
+			$scope.toggleS = function(permission) {
+			var index = $scope.selectedP.indexOfObjectWithProperty('id', permission.id);
+			if (index > -1) {
+				// Is currently selected, so remove it
+				$scope.selectedP.splice(index, 1);
+				console.log(index);
+			} else {
+				// Is currently unselected, so add it
+				$scope.selectedP.push(permission);
+				console.log(permission);
+			}
+		};
+		
 
 
 	})
@@ -65,8 +83,14 @@ angular.module('starter.controllers', [])
 		$scope.deleteCartData = function() {
 			for (var i = 0, len = $scope.selectedPermissions.length; i < len; i++) {
 			for(var j=0,lens=$scope.cartdatas.length;j<lens;j++){
+				console.log($scope.cartdatas[j].id);
 				if($scope.cartdatas[j].id==$scope.selectedPermissions[i].id){
 					$scope.cartdatas.splice(j,1);
+					getHttp.post_data(carturl,$scope.selectedPermissions[i]).then(function(_data){
+                    
+					}, function(){
+						alert("del fail");
+					})
 				}
 			}
 			}
